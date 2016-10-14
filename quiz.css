@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Mystery;
+    src: url(Fonts/MysteryQuest-Regular.ttf);
+}
+html{
+    background-image: url(Bilder/banner-1090830.jpg);
+    background-repeat: no-repeat;
+    background-size: 3000px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    overflow: hidden;
+    background-color: ghostwhite; 
+    align-content: center;
+}
+li a{
+    text-align: center;
+    display: block;
+    color: grey;
+    padding: 8px 16px; 
+    text-decoration: none;
+    font-family: fantasy;
+}
+li{
+    float: left;
+}
+li a:hover:not(.active){
+    background-color: black;
+}
+
+.active{
+    background-color: black;
+}
+#bildetilspørsmål {
+    height: 250px;
+}
+#oppgave {
+    font-family: Mystery;
+    font-size: 30px;
+    margin: 10px;
+}

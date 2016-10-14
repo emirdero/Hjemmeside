@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="Ikoner/favicon.ico">
+<link rel="stylesheet" type="text/css" href="quiz.css">
+<title>Quiz</title>
+</head>
+<body>
+<ul>
+    <li><a href="index.html">Hjem</a></li>
+    <li><a href="Galleri.html">Galeriet</a></li>
+    <li><a class="active" href="quiz.html">Quiz</a></li>
+</ul>
+<center>
+    <div>
+    <img id="quiz" src="Animasjoner/quizlogo.gif" alt="Quiz" height="120px">
+    </div>
+    <p id="oppgave">Spørsmål</p>
+    <div>
+    <img id="bildetilspørsmål" src="#">
+    </div>
+    <input id="txtsvar">
+    <div>
+    <p id="tilbakemelding">(Resultat)</p>
+    </div>
+    <div>
+    <button onclick="reload()">Prøv på nytt</button>
+    </div>
+</center>
+<script>
+    window.onload = oppstart;
+    
+    var spørsmål = ["Hvilket dyr er dette?", "Hvem er dette?"]
+    var bilder = ["Bilder/goat-1596880.jpg", "Bilder/Screenshot_1.png"]
+    var svar = ["geit", "per solli", ]
+    var indeks = 0
+    var poeng = 0
+    
+    function oppstart() {
+        document.getElementById("oppgave").innerHTML = spørsmål[indeks]
+        document.getElementById("bildetilspørsmål").src = bilder[indeks]
+        document.getElementById("txtsvar").onkeyup = svarfunk
+    }
+    
+    function svarfunk(evt) {
+        if (evt.keyCode == 13) {
+            var svaravgitt = document.getElementById("txtsvar").value.toLowerCase()
+            if (svaravgitt == svar[indeks]) {
+                document.getElementById("tilbakemelding").innerHTML = "Riktig"
+                poeng ++
+            }
+            else if (svaravgitt == "gif points plz") {
+                document.getElementById("tilbakemelding").innerHTML = "つ ◕_◕ ༽つ"
+                poeng += 1000
+            }
+            else {
+                document.getElementById("tilbakemelding").innerHTML = "Feil"
+            }
+            document.getElementById("txtsvar").value = ""
+            indeks ++
+            if (indeks < spørsmål.length) {
+                document.getElementById("oppgave").innerHTML = spørsmål[indeks]
+                document.getElementById("bildetilspørsmål").src = bilder[indeks]
+            }
+            else {
+                document.getElementById("oppgave").innerHTML = "Du fikk " + poeng + " poeng, som er " + (poeng*100/spørsmål.length).toFixed(0) + "% riktig"
+                if (poeng == 0) {
+                document.getElementById("bildetilspørsmål").src = "Bilder/sculpture-1439171_1920.jpg"
+                }
+                else if (poeng == 1) {
+                 document.getElementById("bildetilspørsmål").src = "Bilder/business-man-1002781.png"
+                }
+                else if (poeng == 2) {
+                 document.getElementById("bildetilspørsmål").src = "Animasjoner/1441942954753.gif"
+                }
+                else {
+                    document.getElementById("bildetilspørsmål").src = "Animasjoner/1441942954753.gif"
+                }
+            }
+        }
+    }
+    function reload() {
+        location.reload();
+    }
+</script>
+</body>
+</html>

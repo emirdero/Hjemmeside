@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="Ikoner/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="galleri.css">
+    <title>Galleriet</title>
+</head>
+<ul>
+    <li><a href="index.html">Hjem</a></li>
+    <li><a class="active" href="Galleri.html">Galeriet</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+</ul>
+<body>
+<!--    <a href="index.html"><button id="tilbake">Tilbake</button></a> -->
+<center>
+    <img id="bilde" src="#" width="800px" alt="#">
+</center>
+<script>
+    window.onload = oppstart;
+    
+    var bildeliste = 
+        ["Bilder/Galeri/Jagerfly.jpg", "Bilder/Galeri/Gate.jpg", "Bilder/Galeri/Strand.jpg", "Bilder/Galeri/Bab-shappe.jpg", "Bilder/Galeri/Bil.jpg", "Bilder/Galeri/Tunisia.jpg", "Bilder/Galeri/Ridderne%20rundt%20det%20runde%20bord.jpg", "Bilder/Galeri/Japan%20gate.jpg", "Bilder/Galeri/Oscar.jpg", "" ]
+    var tekstliste = 
+        ["Jagerfly", "Gate i Oslo", "Strand i Tunisia", "babsjappe i Tunisia", "Rød ferrari", "En motorvei i Tunisia", "Ridderene rundt det runde bord", "En gate i Japan", "Oscar"]
+    
+    var indeks= 0
+    
+    function oppstart() {
+        document.getElementById("bilde").src=bildeliste[indeks]
+        document.getElementById("bilde").alt=tekstliste[indeks]
+        ID=setInterval(neste,4000)
+    }
+    
+        function neste() {
+            indeks ++
+            if (indeks > bildeliste.length){
+                indeks = 0
+            }
+            document.getElementById("bilde").src=bildeliste[indeks]
+            document.getElementById("bilde").alt=tekstliste[indeks]
+        }
+</script>
+</body>
+</html>

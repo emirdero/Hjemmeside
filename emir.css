@@ -1,0 +1,81 @@
+html {
+    background: url(Bilder/Emir_sky.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-color: cornflowerblue;
+}
+#t {
+    border-style: solid;
+    border-color: black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: monaco, consolas, "lucida console", monospace;
+    font-size: 50px;
+}
+h2 {
+    top: 110px;
+    font-style: italic;
+    font-family: Georgia;
+}
+pre {
+    line-height: 35px;
+    top: 150px;
+    font-weight: bold;
+    font-family: courier new;
+}
+#chicken {
+    border-radius: 30%;
+    padding: 40px 20px;
+    right: 20px;
+    bottom: 150px;
+    background-color: whitesmoke;
+    display: inline-flex;
+    color: #222;
+    font-size: 30px;
+    text-shadow: 0px 2px 3px #555;
+    position: relative;
+    float: right;
+}
+button {
+    font-size: 20px;
+    font-family: fantasy;
+    top: 20px;
+    background-color: #e7e7e7; color: black;
+    border-radius: 50%;
+    padding: 15px 32px;
+    float: bottom;
+}
+.cover {
+
+}
+iframe{
+    align-content: center;
+    float: right;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    overflow: hidden;
+    background-color: whitesmoke; 
+    align-content: center;
+}
+li a{
+    text-align: center;
+    display: block;
+    color: black;
+    padding: 8px 16px; 
+    text-decoration: none;
+    font-family: fantasy;
+}
+li{
+    float: left;
+}
+li a:hover:not(.active){
+    background-color: darkblue;
+}
+
+.active{
+    background-color: steelblue;
+}

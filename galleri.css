@@ -1,0 +1,48 @@
+html {
+    background: url(Bilder/Galeri/ramme.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*#tilbake{
+    font-size: 30px;
+    border: -10px;
+    border-color: goldenrod;
+    background-color: white;
+    color: black;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+}
+
+#tilbake:hover {
+    background-color: goldenrod;
+    color: white;
+}*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    overflow: hidden;
+    background-color: goldenrod; 
+    align-content: center;
+}
+li a{
+    text-align: center;
+    display: block;
+    color: whitesmoke;
+    padding: 8px 16px; 
+    text-decoration: none;
+    font-family: fantasy;
+}
+li{
+    float: left;
+}
+li a:hover:not(.active){
+    background-color: gold;
+}
+
+.active{
+    background-color: darkgoldenrod;
+}
